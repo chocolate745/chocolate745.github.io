@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>？？？</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #121212;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <video id="noiseVideo" autoplay muted>
+        <source src="noise.mp4" type="video/mp4">
+        あなたのブラウザは動画をサポートしていません。
+    </video>
+    
+    <video id="sandstormVideo" autoplay muted style="display: none;">
+        <source src="sandstorm.mp4" type="video/mp4">
+        あなたのブラウザは動画をサポートしていません。
+    </video>
+    
+    <script>
+        setTimeout(() => {
+            document.getElementById('noiseVideo').style.display = 'none';
+            document.getElementById('sandstormVideo').style.display = 'block';
+            document.getElementById('sandstormVideo').play();
+        }, 5000); // 5秒後に砂嵐動画へ切り替え
+    </script>
+</body>
+</html>

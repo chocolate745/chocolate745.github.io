@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ファイルにアクセスできません</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282828; /* 黒に近いグレー */
+            color: #bdbdbd; /* 明るめの灰色 */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;  /* 水平方向の中央揃え */
+            align-items: center;  /* 垂直方向の中央揃え */
+            text-align: center;
+        }
+        .error-container {
+            text-align: left;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #e0e0e0; /* ちょっと白に近いグレー */
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 50px;
+            color: #e0e0e0; 
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #bdbdbd; /* 本物に近い灰色 */
+            margin: 5px 0;
+        }
+        .error-code {
+            color: #888; /* エラーコードは暗め */
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <h2>404 ERROR</h2>
+        <h1>ファイルにアクセスできませんでした</h1>
+        <p>移動、編集、削除された可能性があります。</p>
+        <p class="error-code">ERR_FILE_NOT_FOUND</p>
+    </div>
+
+    <script>
+        // 5秒後に砂嵐動画のページへリダイレクト
+        setTimeout(function() {
+            window.location.href = "sandstorm.html"; // 砂嵐動画のページへ
+        }, 5000);
+    </script>
+
+</body>
+</html>
